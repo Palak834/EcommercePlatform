@@ -1,5 +1,7 @@
 E-Commerce Microservices Application
+
 Overview
+
 This project is a microservices-based e-commerce platform built using Spring Boot and Spring Cloud. It consists of multiple independent services that communicate via a gateway, with Eureka Server for service discovery. The application supports user registration, login, profile management, product browsing, cart operations, order processing, and payment handling.
 Services
 
