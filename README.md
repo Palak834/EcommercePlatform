@@ -3,6 +3,8 @@ E-Commerce Microservices Application
 Overview
 
 This project is a microservices-based e-commerce platform built using Spring Boot and Spring Cloud. It consists of multiple independent services that communicate via a gateway, with Eureka Server for service discovery. The application supports user registration, login, profile management, product browsing, cart operations, order processing, and payment handling.
+
+
 Services
 
 
@@ -16,13 +18,17 @@ Cart Service: Manages user shopping carts (Port: 8084).
 Order Service: Processes and manages orders (Port: 8085).
 Payment Service: Handles payment processing (Port: 8087).
 
+
 Prerequisites
 
 Java 17
 Maven
 MySQL (with databases: ecommerce_db, ecommerce_product_db, ecommerce_cart_db, ecommerce_order_db, ecommerce_payment_db)
 
+
 Setup Instructions
+
+
 1. Database Configuration
 
 Install MySQL and create the required databases.
@@ -69,6 +75,7 @@ Create Order: POST /order/user/{userId} (requires JWT)
 
 Use the Login Service to generate a JWT token.
 Include the token in the Authorization header as Bearer <token> for protected endpoints.
+
 
 Configuration
 
