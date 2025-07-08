@@ -17,16 +17,14 @@ This project is a microservices-based e-commerce platform built using Spring Boo
 ## Prerequisites
 - Java 17
 - Maven
-- MySQL (with databases: `ecommerce_db`, `ecommerce_cart_db`, `ecommerce_order_db`, `ecommerce_payment_db`)
-- Docker (optional, for containerization)
+- MySQL (with databases: `ecommerce_db`,  `ecommerce_product_db`, `ecommerce_cart_db`, `ecommerce_order_db`, `ecommerce_payment_db`)
+  
 
 ## Setup Instructions
 
 ### 1. Database Configuration
 - Install MySQL and create the required databases.
 - Update `application.properties` in each service with your MySQL credentials:
-  - Username: `root`
-  - Password: `root@1234`
   - URLs are pre-configured in the properties files.
 
 ### 2. Build the Project
@@ -38,15 +36,15 @@ This project is a microservices-based e-commerce platform built using Spring Boo
 
 ### 3. Run the Services
 - Start the services in the following order:
-  1. **Eureka Server**: `java -jar target/EurekaServer-0.0.1-SNAPSHOT.jar`
-  2. **Gateway API**: `java -jar target/GatewayAPI-0.0.1-SNAPSHOT.jar`
-  3. **Registration Service**: `java -jar target/RegistrationService-0.0.1-SNAPSHOT.jar`
-  4. **Login Service**: `java -jar target/LoginService-0.0.1-SNAPSHOT.jar`
-  5. **Profile Service**: `java -jar target/ProfileService-0.0.1-SNAPSHOT.jar`
-  6. **Product Service**: `java -jar target/ProductService-0.0.1-SNAPSHOT.jar`
-  7. **Cart Service**: `java -jar target/CartService-0.0.1-SNAPSHOT.jar`
-  8. **Order Service**: `java -jar target/OrderService-0.0.1-SNAPSHOT.jar`
-  9. **Payment Service**: `java -jar target/PaymentService-0.0.1-SNAPSHOT.jar`
+  1. **Eureka Server**
+  2. **Gateway API**
+  3. **Registration Service**
+  4. **Login Service**
+  5. **Profile Service**
+  6. **Product Service**
+  7. **Cart Service**
+  8. **Order Service**
+  9. **Payment Service**
 
 ### 4. API Endpoints
 - Access the Gateway API at `http://localhost:8080`.
@@ -62,22 +60,7 @@ This project is a microservices-based e-commerce platform built using Spring Boo
 - Include the token in the `Authorization` header as `Bearer <token>` for protected endpoints.
 
 ## Configuration
-- **JWT Secret**: `az19urDV3Ukf9srVBxvZxftj3PE2pgAKTGi4EOS5ObI=` (same across services).
+- **JWT Secret**: Same across services.
 - **Eureka URL**: `http://localhost:8761/eureka/`.
 - Logs are configured with DEBUG level for troubleshooting.
 
-## Running with Docker (Optional)
-- Ensure Docker is installed.
-- Build Docker images for each service using the provided `Dockerfile` (if added).
-- Use `docker-compose` to orchestrate services (create a `docker-compose.yml` file if needed).
-
-## Contributing
-- Fork the repository.
-- Create a new branch for your feature or bug fix.
-- Submit a pull request with detailed changes.
-
-## License
-This project is currently unlicensed. Please contact the maintainers for details.
-
-## Contact
-For issues or questions, open an issue on this repository or contact the project maintainers.
