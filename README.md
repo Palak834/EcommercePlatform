@@ -9,13 +9,21 @@ Services
 
 
 Eureka Server: Service registry for discovering other microservices (Port: 8761).
+
 Gateway API: Entry point for routing requests to appropriate services with JWT authentication (Port: 8080).
+
 Registration Service: Handles user registration (Port: 8081).
+
 Login Service: Manages user authentication and JWT token generation (Port: 8082).
+
 Profile Service: Manages user profile updates and retrieval (Port: 8083).
+
 Product Service: Handles product catalog and category management (Port: 8086).
+
 Cart Service: Manages user shopping carts (Port: 8084).
+
 Order Service: Processes and manages orders (Port: 8085).
+
 Payment Service: Handles payment processing (Port: 8087).
 
 
